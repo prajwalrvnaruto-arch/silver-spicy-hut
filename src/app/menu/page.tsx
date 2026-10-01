@@ -241,7 +241,7 @@ export default function MenuPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/restaurant_indoor_seating.jpg"
-            alt="Spicy Hut Menu"
+            alt="Silver Spicy Hut Menu"
             fill
             className="object-cover"
             priority

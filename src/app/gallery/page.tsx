@@ -67,7 +67,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero_dusk_entrance.jpg"
-            alt="Spicy Hut Gallery"
+            alt="Silver Spicy Hut Gallery"
             fill
             className="object-cover"
             priority

@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/restaurant_indoor_seating.jpg"
-            alt="Spicy Hut About"
+            alt="Silver Spicy Hut About"
             fill
             className="object-cover"
             priority
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 container-main text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Spicy Hut</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Silver Spicy Hut</h1>
           <p className="text-xl text-gray-200">
             Your Family Dining Destination in Mitganahalli
           </p>
@@ -76,7 +76,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-[var(--text-secondary)]">
                 <p>
-                  Welcome to Spicy Hut, where every meal is a celebration of flavor,
+                  Welcome to Silver Spicy Hut, where every meal is a celebration of flavor,
                   tradition, and warm hospitality. Located in the heart of Mitganahalli
                   on the bustling Hennur-Bagalur Road, we've been serving authentic
                   multicuisine delicacies to our cherished guests.
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <p>
                   Our commitment to quality ingredients, authentic recipes, and
                   impeccable service has earned us the trust of over 377+ happy reviewers
-                  across platforms. We invite you to experience the Spicy Hut difference.
+                  across platforms. We invite you to experience the Silver Spicy Hut difference.
                 </p>
               </div>
             </motion.div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Spicy Hut Location"
+                title="Silver Spicy Hut Location"
               />
             </motion.div>
           </div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Experience Spicy Hut Today
+              Experience Silver Spicy Hut Today
             </h2>
             <p className="text-white/80 text-lg mb-8">
               We're ready to welcome you with open arms and delicious food

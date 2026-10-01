@@ -10,11 +10,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Spicy Hut | Family Dining in Mitganahalli | Hennur-Bagalur Road",
-  description: "Spicy Hut offers authentic multicuisine dining on Hennur-Bagalur Road. 4.1★ rated. Chinese, North Indian, Continental. Reserve your table today!",
+  title: "Silver Spicy Hut | Family Dining in Mitganahalli | Hennur-Bagalur Road",
+  description: "Silver Spicy Hut offers authentic multicuisine dining on Hennur-Bagalur Road. 4.1★ rated. Chinese, North Indian, Continental. Reserve your table today!",
   keywords: "restaurant, family dining, Mitganahalli, Hennur, Bangalore, multicuisine, North Indian, Chinese, Continental",
   openGraph: {
-    title: "Spicy Hut | Family Dining Restaurant",
+    title: "Silver Spicy Hut | Family Dining Restaurant",
     description: "Authentic multicuisine casual dining. 4.1★ rated across platforms.",
     type: "website",
   },

@@ -90,7 +90,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero_dusk_entrance.jpg"
-            alt="Spicy Hut Restaurant Entrance"
+            alt="Silver Spicy Hut Restaurant Entrance"
             fill
             className="object-cover"
             priority
@@ -106,7 +106,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance">
-              Spicy Hut
+              Silver Spicy Hut
             </h1>
             <p className="text-xl md:text-2xl mb-2 text-gray-200">
               Where Every Meal Feels Like Home
@@ -169,7 +169,7 @@ export default function Home() {
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/restaurant_indoor_seating.jpg"
-                  alt="Spicy Hut Indoor Seating"
+                  alt="Silver Spicy Hut Indoor Seating"
                   fill
                   className="object-cover"
                 />
@@ -183,7 +183,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--brand-red)]">
-                Welcome to Spicy Hut
+                Welcome to Silver Spicy Hut
               </h2>
               <p className="text-lg text-[var(--text-secondary)] mb-4">
                 Your family dining destination in Mitganahalli, conveniently located on the
@@ -192,7 +192,7 @@ export default function Home() {
               <p className="text-[var(--text-secondary)] mb-6">
                 We serve authentic multicuisine delights - from North Indian tandoor specialties
                 to Chinese wok-tossed favorites and Continental comfort food. Whether you're
-                planning a family dinner, a group celebration, or a casual meal, Spicy Hut
+                planning a family dinner, a group celebration, or a casual meal, Silver Spicy Hut
                 offers the perfect ambiance with ample parking.
               </p>
               <a href="/about" className="btn-secondary inline-flex items-center gap-2">
@@ -268,7 +268,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--deep-brown)]">
-              Why Choose Spicy Hut
+              Why Choose Silver Spicy Hut
             </h2>
           </motion.div>
 
@@ -409,7 +409,7 @@ export default function Home() {
               Reserve Your Table
             </h2>
             <p className="text-gray-300 text-lg">
-              Book your dining experience at Spicy Hut
+              Book your dining experience at Silver Spicy Hut
             </p>
           </motion.div>
 
@@ -428,7 +428,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Ready to Experience Spicy Hut?
+              Ready to Experience Silver Spicy Hut?
             </h2>
             <p className="text-white/80 text-lg mb-8">
               Visit us for an unforgettable dining experience

@@ -43,7 +43,7 @@ export default function Header() {
                 isScrolled ? 'text-[var(--brand-red)]' : 'text-white'
               }`}
             >
-              Spicy Hut
+              Silver Spicy Hut
             </span>
           </Link>
 

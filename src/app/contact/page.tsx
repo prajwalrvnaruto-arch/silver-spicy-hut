@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero_dusk_entrance.jpg"
-            alt="Spicy Hut Contact"
+            alt="Silver Spicy Hut Contact"
             fill
             className="object-cover"
             priority
@@ -138,7 +138,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Spicy Hut Location"
+                title="Silver Spicy Hut Location"
               />
             </motion.div>
 
@@ -254,7 +254,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Ready to Experience Spicy Hut?
+              Ready to Experience Silver Spicy Hut?
             </h2>
             <p className="text-white/80 text-lg mb-8">
               Book your table now and enjoy an unforgettable dining experience

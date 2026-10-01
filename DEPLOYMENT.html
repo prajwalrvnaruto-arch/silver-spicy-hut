@@ -1,0 +1,472 @@
+<title>Spicy Hut Deployment Guide</title>
+<style>
+:root {
+  --brand-red: #D32F2F;
+  --warm-orange: #FF6F00;
+  --deep-brown: #4E342E;
+  --cream: #FFF8E1;
+  --light-gray: #F5F5F5;
+  --dark-gray: #212121;
+  --text-secondary: #757575;
+  --success-green: #388E3C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --brand-red: #FF5252;
+    --warm-orange: #FFB74D;
+    --deep-brown: #D7CCC8;
+    --cream: #1E1E1E;
+    --light-gray: #121212;
+    --dark-gray: #F5F5F5;
+    --text-secondary: #B0B0B0;
+    --success-green: #66BB6A;
+    color-scheme: dark;
+  }
+}
+
+body {
+  background: var(--light-gray);
+  color: var(--dark-gray);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--brand-red);
+  border-bottom: 3px solid var(--brand-red);
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+h2 {
+  color: var(--deep-brown);
+  margin-top: 30px;
+}
+
+h3 {
+  color: var(--brand-red);
+}
+
+.status-box {
+  background: var(--cream);
+  border-left: 4px solid var(--brand-red);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.check {
+  color: var(--success-green);
+  font-weight: bold;
+}
+
+.cross {
+  color: var(--brand-red);
+  font-weight: bold;
+}
+
+.step-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--brand-red);
+  margin-bottom: 10px;
+}
+
+code {
+  background: var(--light-gray);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.code-block {
+  background: var(--light-gray);
+  border-left: 4px solid var(--warm-orange);
+  padding: 15px;
+  margin: 10px 0;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.code-block code {
+  background: transparent;
+  padding: 0;
+}
+
+ol, ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+a {
+  color: var(--brand-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--warm-orange);
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  background: var(--brand-red);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  margin: 10px 5px 10px 0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--warm-orange);
+  text-decoration: none;
+}
+
+.button-secondary {
+  background: white;
+  color: var(--brand-red);
+  border: 2px solid var(--brand-red);
+}
+
+.warning {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--brand-red);
+  color: white;
+}
+
+.checklist {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.checklist-item {
+  margin: 10px 0;
+}
+
+.checklist-item input {
+  margin-right: 8px;
+}
+</style>
+
+<div class="container">
+  <h1>🍽️ Spicy Hut - Deployment Guide</h1>
+
+  <div class="status-box">
+    <div class="status-item">
+      <span class="check">✓</span>
+      <strong>Project built successfully with Next.js 14</strong>
+    </div>
+    <div class="status-item">
+      <span class="cross">✗</span>
+      <strong>Netlify deployment failed - plugin configuration issue</strong>
+    </div>
+    <div class="status-item">
+      <span class="check">✓</span>
+      <strong>Project pushed to GitHub</strong>
+    </div>
+  </div>
+
+  <h2>⚡ Quick Start - Use Vercel (Recommended)</h2>
+  <p><strong>Why Vercel?</strong> Vercel is made by the creators of Next.js and provides the best hosting for Next.js applications. Deployment takes just 2-3 minutes.</p>
+
+  <div class="step-box">
+    <div class="step-title">Step 1: Go to Vercel</div>
+    <p>Visit <a href="https://vercel.com" target="_blank">vercel.com</a> and click "New Project"</p>
+    <a href="https://vercel.com" class="button" target="_blank">Open Vercel</a>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Step 2: Import GitHub Repository</div>
+    <ul>
+      <li>Click "Import from Git"</li>
+      <li>Select GitHub (authorize if needed)</li>
+      <li>Find and select: <code>silver-spicy-hut</code></li>
+      <li>Click "Import"</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Step 3: Configure Build Settings</div>
+    <p>Vercel auto-detects Next.js! Keep defaults:</p>
+    <table>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Framework</td>
+        <td>Next.js</td>
+      </tr>
+      <tr>
+        <td>Build Command</td>
+        <td><code>npm run build</code></td>
+      </tr>
+      <tr>
+        <td>Output Directory</td>
+        <td><code>.next</code></td>
+      </tr>
+      <tr>
+        <td>Install Command</td>
+        <td><code>npm install</code></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Step 4: Add Environment Variables</div>
+    <p>Before deploying, add your Firebase credentials:</p>
+    <ol>
+      <li>Click "Environment Variables"</li>
+      <li>Add these variables (get values from Firebase Console):</li>
+    </ol>
+    <div class="code-block"><code>NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id</code></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Step 5: Deploy!</div>
+    <p>Click "Deploy" and wait 2-3 minutes. Your site will be live at:</p>
+    <code>silver-spicy-hut.vercel.app</code>
+  </div>
+
+  <h2>🔥 Firebase Setup (Required)</h2>
+  <p>Your reservation form needs Firebase to store bookings.</p>
+
+  <div class="step-box">
+    <div class="step-title">1. Create Firebase Project</div>
+    <ol>
+      <li>Go to <a href="https://console.firebase.google.com" target="_blank">Firebase Console</a></li>
+      <li>Click "Create Project"</li>
+      <li>Project name: <code>silver-spicy-hut</code></li>
+      <li>Accept default settings and create</li>
+    </ol>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">2. Enable Firestore Database</div>
+    <ol>
+      <li>In Firebase console, go to "Build" → "Firestore Database"</li>
+      <li>Click "Create Database"</li>
+      <li>Start in <strong>Production Mode</strong></li>
+      <li>Location: <code>asia-south1</code> (India)</li>
+      <li>Click "Enable"</li>
+    </ol>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">3. Create Firestore Collections</div>
+    <p>Click "Start collection" and create:</p>
+    <ul>
+      <li><strong>Collection ID:</strong> <code>reservations</code></li>
+      <li><strong>Add first document:</strong> Skip for now</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">4. Get Firebase Credentials</div>
+    <ol>
+      <li>Click ⚙️ (Settings) → Project Settings</li>
+      <li>Scroll to "Your apps" section</li>
+      <li>Click "Web" icon to create web app</li>
+      <li>Copy the config object</li>
+      <li>Add values to Vercel Environment Variables</li>
+    </ol>
+  </div>
+
+  <h2>🌐 Custom Domain (Optional)</h2>
+  <p>Connect your own domain (e.g., spicyhut.in)</p>
+
+  <div class="step-box">
+    <div class="step-title">In Vercel Dashboard</div>
+    <ol>
+      <li>Project Settings → Domains</li>
+      <li>Enter your domain: <code>spicyhut.in</code></li>
+      <li>Follow DNS configuration steps</li>
+      <li>DNS changes take 24-48 hours to propagate</li>
+    </ol>
+  </div>
+
+  <h2>✅ Testing Your Site</h2>
+  <div class="checklist">
+    <div class="checklist-item">
+      <input type="checkbox"> Homepage loads with hero image
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Navigation menu works (Home, Menu, About, Gallery, Contact)
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Menu page displays all 100+ items
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Gallery lightbox opens on click
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Contact form displays and validates
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Reservation form accepts input and validates
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Images load correctly
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> Mobile responsive (test on phone)
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox"> All animations smooth
+    </div>
+  </div>
+
+  <h2>🆘 Troubleshooting</h2>
+
+  <div class="step-box">
+    <div class="step-title">Build Fails: "Cannot find module"</div>
+    <div class="code-block"><code>rm -rf node_modules package-lock.json
+npm install
+npm run build</code></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Environment Variables Not Working</div>
+    <ul>
+      <li>✓ Never commit .env.local to GitHub</li>
+      <li>✓ Add variables in Vercel dashboard (not in code)</li>
+      <li>✓ Trigger new deployment after adding variables</li>
+      <li>✓ Check browser console (F12) for Firebase errors</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Images Not Loading</div>
+    <ul>
+      <li>✓ Check if images are in <code>public/images/</code></li>
+      <li>✓ Verify image file names match in code</li>
+      <li>✓ Check browser console (F12 → Console) for 404 errors</li>
+    </ul>
+  </div>
+
+  <div class="step-box">
+    <div class="step-title">Reservation Form Not Saving</div>
+    <ul>
+      <li>✓ Verify Firebase Firestore is set up</li>
+      <li>✓ Check if environment variables are added in Vercel</li>
+      <li>✓ Open browser console (F12) and look for Firebase errors</li>
+      <li>✓ Verify Firebase credentials are correct</li>
+    </ul>
+  </div>
+
+  <h2>📊 Project Info</h2>
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>GitHub Repo</td>
+      <td><a href="https://github.com/prajwalrvnaruto-arch/silver-spicy-hut" target="_blank">silver-spicy-hut</a></td>
+    </tr>
+    <tr>
+      <td>Tech Stack</td>
+      <td>React + Next.js 14 + TypeScript</td>
+    </tr>
+    <tr>
+      <td>Styling</td>
+      <td>Tailwind CSS</td>
+    </tr>
+    <tr>
+      <td>Backend</td>
+      <td>Firebase Firestore</td>
+    </tr>
+    <tr>
+      <td>Pages</td>
+      <td>5 (Home, Menu, About, Gallery, Contact)</td>
+    </tr>
+    <tr>
+      <td>Menu Items</td>
+      <td>100+ items across 15 categories</td>
+    </tr>
+    <tr>
+      <td>Images</td>
+      <td>24 high-quality restaurant photos</td>
+    </tr>
+  </table>
+
+  <h2>🚀 Next Steps</h2>
+  <ol>
+    <li>✓ Set up Firebase project (5 minutes)</li>
+    <li>✓ Deploy to Vercel (2 minutes)</li>
+    <li>✓ Add environment variables (2 minutes)</li>
+    <li>✓ Test all pages (5 minutes)</li>
+    <li>✓ Configure custom domain (optional)</li>
+    <li>✓ Create Instagram & Facebook pages</li>
+    <li>✓ Update all platform listings with website URL</li>
+  </ol>
+
+  <div class="status-box" style="border-color: var(--success-green); background: #f0f7f4;">
+    <h3 style="color: var(--success-green); margin-top: 0;">✓ You're all set!</h3>
+    <p>Your Spicy Hut website is ready to deploy. Follow the steps above and your site will be live in under 15 minutes.</p>
+    <div style="margin-top: 15px;">
+      <a href="https://vercel.com" class="button" target="_blank">Deploy on Vercel Now</a>
+      <a href="https://console.firebase.google.com" class="button button-secondary" target="_blank">Set Up Firebase</a>
+    </div>
+  </div>
+
+</div>

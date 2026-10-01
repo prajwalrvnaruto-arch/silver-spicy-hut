@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-red: #D32F2F;
+    --warm-orange: #FF6F00;
+    --deep-brown: #4E342E;
+    --cream: #FFF8E1;
+    --light-gray: #F5F5F5;
+    --dark-gray: #212121;
+    --text-secondary: #757575;
+    --gold: #FFB300;
+    --success-green: #388E3C;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --brand-red: #FF5252;
+      --warm-orange: #FFB74D;
+      --deep-brown: #D7CCC8;
+      --cream: #1E1E1E;
+      --light-gray: #121212;
+      --dark-gray: #F5F5F5;
+      --text-secondary: #B0B0B0;
+      --gold: #FFD54F;
+      --success-green: #66BB6A;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --brand-red: #FF5252;
+    --warm-orange: #FFB74D;
+    --deep-brown: #D7CCC8;
+    --cream: #1E1E1E;
+    --light-gray: #121212;
+    --dark-gray: #F5F5F5;
+    --text-secondary: #B0B0B0;
+    --gold: #FFD54F;
+    --success-green: #66BB6A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--brand-red)] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-[var(--warm-orange)] hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[var(--brand-red)] border-2 border-[var(--brand-red)] px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-[var(--cream)];
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 p-6;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .text-brand {
+    color: var(--brand-red);
+  }
+
+  .bg-brand {
+    background-color: var(--brand-red);
+  }
+
+  .border-brand {
+    border-color: var(--brand-red);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
